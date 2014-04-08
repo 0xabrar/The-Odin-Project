@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<script> 
+	function problem1() {
+		var sum = 0;
+		for (var i = 2; i < 1000; i++) {
+			if ((i % 3 == 0) || (i % 5 == 0)) {
+				sum += i;
+			}
+		}
+		alert("The sum of all multiples of 3 or 5 below 1000 is " 
+			+ sum + ".");
+	}
+
+	function problem2() {
+
+		//Keep track of sums as well as sequence numbers
+		var firs_num = 1;
+		var sec_num = 2;
+		var sum = firs_num + sec_num;
+		var total_sum = 0;
+
+		//The value of the sum must be less than 4 million
+		while(sum < 4000000) {
+			if (sum % 2 == 0) {
+				total_sum += sum;
+			}
+			//Update values according to Fibonacci sequence
+			firs_num = sec_num;
+			sec_num = sum;
+			sum = firs_num + sec_num;
+		}
+		alert("The sum of the even-valued terms is " 
+			+ total_sum + ".");
+	}
+
+	function problem3() {
+		factors = [];
+		var d = 2;
+		var n = 600851475143;
+		//Going to determine all of the prime factors of n.
+		while (n > 1) {
+			while (n % d == 0) {
+				factors.push(d);
+				n /= d;
+			}
+			d += 1;
+		}
+		//Print out the largest prime factor in array of factors.
+		var largest_prime_factor = Math.max.apply(Math, factors);
+		alert("The largest prime factor of 600851475143 is " 
+			+ largest_prime_factor + ".");
+	}
+
+
+
+	</script>
+</head>
+<body>
+	<button onclick="problem1()"> Problem 1 </button>
+	<button onclick="problem2()"> Problem 2 </button>
+	<button onclick="problem3()"> Problem 3 </button>
+</body>
+</html>
