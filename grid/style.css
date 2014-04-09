@@ -1,0 +1,33 @@
+div {
+	display: block;
+}
+
+button {
+	min-width: 80px;
+	min-height: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+#top_container {
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#container {
+	overflow: auto;
+	width: 960px;
+	margin: auto;
+}
+
+.square {
+	background-color: black;
+	float: left;
+	border: 1px solid white;
+}
+
+.new_row {
+	clear: both;
+}

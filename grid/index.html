@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+	<meta charset="utf-8" />
+	<title> Javascript/jQuery Grid </title>
+	<link type="text/css" rel="stylesheet" href="style.css" /> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+
+</head>
+<body>
+	<div id="top_container">
+
+		<h1> Sketch Pad </h1>
+		<p> Move the mouse over a square to sketch. Click the different buttons to try out variations. </p>
+		<button id="regular" onclick="operate(1)"> Regular </button>
+		<button id="random" onclick="operate(2)"> Random </button>
+		<button id="trail" onclick="operate(3)"> Trail </button>
+		<button id="clear" onclick="operate(4)"> Clear </button>
+	</div>
+	<div id="container"> 
+	</div>
+</body>
+</html>
